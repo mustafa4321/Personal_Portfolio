@@ -80,6 +80,55 @@ a{
 /*******************************/
 
 /* Header */
+
+ /*88888888888888888888888888888888888*/
+ .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(31, 30, 30, 1);
+}
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(31, 30, 30, 0.50);
+    min-width: 25%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(31, 30, 30, 1);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
 #navbar{
     position: fixed;
     z-index: 1000;
@@ -423,7 +472,15 @@ a{
 
 
 /* projectc section */
+@media only screen and (min-width: 1025px){
+    #navbar .dropdown{
+        display: none;
+    }
+}
 @media only screen and (max-width: 1024px){
+    #navbar .nav-list{
+        display: none;
+    }
     #projects .project-item{
         flex-direction: column;
         width: 60%; 
@@ -502,6 +559,9 @@ a{
         font-size: 4rem;
     }  
       /* contact section */
+      #projects .projects .projects-header .section-title{
+          font-size: 7rem;
+      }
 
 #contact .contact-item{
     width: 80%;
@@ -535,85 +595,7 @@ a{
     padding: 0 0;
 }
   }
-
-
-
-
-
-  /*88888888888888888888888888888888888*/
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    margin: 0;
-  }
-  
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(31, 30, 30, 1);
-}
-  
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(31, 30, 30, 0.50);
-    min-width: 25%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgba(31, 30, 30, 1);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 /* keyframes */
 @keyframes text_reveal {
     100%{
